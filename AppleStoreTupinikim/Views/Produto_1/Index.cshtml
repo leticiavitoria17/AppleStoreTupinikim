@@ -1,0 +1,161 @@
+﻿@*@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+
+
+@model IEnumerable<Cadastro.Models>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Criar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estoque)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estoque)
+            </td>
+            
+            <td>
+                @Html.ActionLink("Editar", "Editar", new {  id=item.Id  }) |
+
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="text-center">
+    <h1 class="display-4">Listagem de Produtos</h1><a href="c:\users\letic\source\repos\applestoretupinikim\applestoretupinikim\views\produto_1\index.cshtml">c:\users\letic\source\repos\applestoretupinikim\applestoretupinikim\views\produto_1\index.cshtml</a>
+    <p>Sistema de Gestão de produtos</p>
+    <div class="d-grid gap-2 d-md-block">
+        <a class="btn btn-primary" role="button" asp-controller="Produto_1" asp-action="Criar">Inserir Produto</a>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th> 
+            <th scope="col">Nome Produto</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Estoque</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Iphone 14</td>
+            <td>6.000</td>
+            <td>10</td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <a class="btn btn-primary"  role="button" asp-controller="Produto_1" asp-action="Editar">Editar</a>
+                    <a class="btn btn-danger" role="button" asp-controller="Produto_1" asp-action="Excluir">Excluir</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Mc Book Air 13</td>
+            <td>6.389,10</td>
+            <td>10</td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary" type="button" asp-controller="Produto_1" asp-action="Editar">Button</button>
+                    <button class="btn btn-danger" type="button" asp-controller="Produto_1" asp-action="Excluir">Button</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Apple Wath SE</td>
+            <td>2.339,10</td>
+            <td>5</td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-danger" type="button">Button</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Ipad 9A</td>
+            <td>2.172,80</td>
+            <td>8</td>
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-danger" type="button">Button</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+*@

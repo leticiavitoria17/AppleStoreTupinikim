@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Cadastro Produto";
+}
+
+
+
+
+<div class="text-center">
+    <h1>Cadastro de Produto</h1>
+
+</div>
+<form>
+    <div class="mb-3">
+        <label for="nomeProduto" class="form-label">Nome do Produto</label>
+        <input type="text" class="form-control" placeholder="Digite o nome do produto a ser cadastrado">
+    </div>
+    <div class="mb-3">
+        <label for="valorProduto" class="form-label">Digite o valor do produto</label>
+        <input type="text" class="form-control" placeholder="Digite o valor do produto">
+    </div>
+    <div class="mb-3">
+        <label for="estoqueProduto" class="form-label">Estoque inicial</label>
+        <input type="text" class="form-control" placeholder="Digite o estoque inicial">
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Produto_1" asp-action="Index" role="button"> Voltar</a>
+</form>
+
